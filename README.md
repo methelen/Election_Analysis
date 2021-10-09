@@ -17,14 +17,14 @@ of a recent local congressional election
 
 ## Summary
 The analysis of the election shows that:
-  -There were 369,711 votes cast in the election.
-  -The candidates were: Charles Casper Stockham, Diana DeGette, and Raymon Anthony Doane
-  -The candidate results were:
-	Charles Casper Stockham received 23.0% of the vote and 85,213 votes.
-	Diane DeGette received 73.8% of the vote and 272,892 votes.
-	Raymon Anthony Doane received 3.1% of the vote and 11,606 votes.
-  -The winner of the election was:
-	Diane DeGette, who received 73.8% of the vote and 272,892 votes.
+  	-There were 369,711 votes cast in the election.
+  	-The candidates were: Charles Casper Stockham, Diana DeGette, and Raymon Anthony Doane
+  	-The candidate results were:
+		Charles Casper Stockham received 23.0% of the vote and 85,213 votes.
+		Diane DeGette received 73.8% of the vote and 272,892 votes.
+		Raymon Anthony Doane received 3.1% of the vote and 11,606 votes.
+  	-The winner of the election was:
+		Diane DeGette, who received 73.8% of the vote and 272,892 votes.
 
 ## Challenge Overview
 
