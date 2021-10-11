@@ -31,66 +31,67 @@ Further analysis was requested to produce county specific results.
 
 ## Challenge Results
  - There were 369,711 votes cast in the election.
-
-	total_votes = 0
-	total_votes = total_votes + 1
+```
+total_votes = 0
+total_votes = total_votes + 1
 
  - Jefferson County made up 10.5% of the vote with 38,855 votes. Denver County made up 
-   82.8% of the vote iwth 306,055 votes. Arapahoe County made up 6.7% of the vote with 
+   82.8% of the vote with 306,055 votes. Arapahoe County made up 6.7% of the vote with 
    24,801 votes.
+```
+county_list= []
+county_votes = {}
 
-	county_list= []
-	county_votes = {}
+if county_name not in county_list:
+	county_list.append(county_name)
+	county_votes[county_name] = 0
+county_votes[county_name] += 1
 
-	if county_name not in county_list:
-		county_list.append(county_name)
-		county_votes[county_name] = 0
-	county_votes[county_name] += 1
-
-	for county_name in county_list:
-		votes_co = county_votes[county_name]		
-		votes_co_percentage = float(votes_co) / float(total_votes) * 100
-        	county_results_summary = (
-            		f"{county_name}: {votes_co_percentage:.1f}% ({votes_co:,})\n")
-
+for county_name in county_list:
+	votes_co = county_votes[county_name]		
+	votes_co_percentage = float(votes_co) / float(total_votes) * 100
+       	county_results_summary = (
+       		f"{county_name}: {votes_co_percentage:.1f}% ({votes_co:,})\n")
+```
  - Denver County had the largest number of votes.
+```
+largest_county = ""
+largest_turnout = 0
 
-	largest_county = ""
-	largest_turnout = 0
-
-        if (votes_co > largest_turnout):
-            largest_turnout = votes_co
-            largest_county = county_name
-
+if (votes_co > largest_turnout):
+	largest_turnout = votes_co
+	largest_county = county_name
+```
  - Charles Casper Stockham received 23.0% of the vote and 85,213 votes.	Diana DeGette 
    received 73.8% of the vote and 272,892 votes. Raymon Anthony Doane received 3.1% of 
    the vote and 11,606 votes.
+```
+candidate_options = []
+candidate_votes = {}
 
-	candidate_options = []
-	candidate_votes = {}
+if candidate_name not in candidate_options:
+	candidate_options.append(candidate_name)
+	candidate_votes[candidate_name] = 0
+candidate_votes[candidate_name] += 1
 
-	if candidate_name not in candidate_options:
-		candidate_options.append(candidate_name)
-		candidate_votes[candidate_name] = 0
-	candidate_votes[candidate_name] += 1
-
-	for candidate_name in candidate_votes:
-		votes = candidate_votes.get(candidate_name)
-        	vote_percentage = float(votes) / float(total_votes) * 100
-        	candidate_results = (
-            		f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
-
+for candidate_name in candidate_votes:
+	votes = candidate_votes.get(candidate_name)
+       	vote_percentage = float(votes) / float(total_votes) * 100
+       	candidate_results = (
+      		f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+```
  - The winner of the election was Diana DeGette with 272,892 votes making up 73.8% of
    the vote.
-	winning_candidate = ""
-	winning_count = 0
-	winning_percentage = 0
+```
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
 
-	if (votes > winning_count) and (vote_percentage > winning_percentage):
-            	winning_count = votes
-            	winning_candidate = candidate_name
-            	winning_percentage = vote_percentage
-
+if (votes > winning_count) and (vote_percentage > winning_percentage):
+	winning_count = votes
+	winning_candidate = candidate_name
+      	winning_percentage = vote_percentage
+```
 ## Challenge Summary
 Using this script, I was able to quickly analyze the data to produce the election results.
 This script can easily be used to analyze any election with multiple candidates and multiple
