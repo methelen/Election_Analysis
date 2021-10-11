@@ -52,7 +52,7 @@ if county_name not in county_list:
 county_votes[county_name] += 1
 
 for county_name in county_list:
-	votes_co = county_votes[county_name]		
+	votes_co = county_votes[county_name]
 	votes_co_percentage = float(votes_co) / float(total_votes) * 100
        	county_results_summary = (
        		f"{county_name}: {votes_co_percentage:.1f}% ({votes_co:,})\n")
